@@ -1,0 +1,278 @@
+/* 나눔스퀘어네오 */
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 아네모네 에어 */
+@font-face {
+    font-family: 'Cafe24Ohsquareair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/Cafe24Ohsquareair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 아네모네 볼드 */
+@font-face {
+    font-family: 'Cafe24Ohsquare';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 가나초콜릿체 */
+@font-face {
+    font-family: 'ghanachoco';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 공용 스타일 */
+.text_area {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.area_title {
+    font-size: 50px;
+    font-family: 'Cafe24Ohsquare';
+    margin-bottom: 16px;
+}
+
+.area_text {
+    margin-bottom: 100px;
+    font-family: 'NanumSquareNeo-Variable';
+}
+
+/* 헤더 시작 */
+header {
+    font-family: 'NanumSquareNeo-Variable';
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    font-size: 22px;
+    z-index: 999;
+    background: #fff;
+}
+
+.header_menu {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    height: 88px;
+}
+
+.header_menu>li>a {
+    padding: 0 60px;
+}
+
+/* 헤더 끝 */
+
+/* 메인(시작부분) 슬라이드 영역 시작 */
+.main_slide_area {
+    position: relative;
+}
+
+.header_menu {
+    display: flex;
+    font-family: 'NanumSquareNeo-Variable';
+}
+
+.slider_container {
+    width: 100%;
+    height: 100vh;
+    font-size: 100px;
+    line-height: 500px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider_container>ul {
+    transition: 1s;
+    height: 100vh;
+    display: flex;
+}
+
+.slider_box>li,
+.slider_box>li>img {
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+}
+
+.buttons>button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons .prev {
+    position: relative;
+    margin: 0 50px;
+}
+
+.buttons .next {
+    position: absolute;
+    margin: 0 50px;
+    right: 0;
+}
+
+.buttons .prev::after,
+.buttons .next::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    border-top: 4px solid #ee4a4a;
+    border-right: 4px solid #ee4a4a;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 15%;
+}
+
+.buttons .prev::after {
+    transform: rotate(-135deg);
+}
+
+.buttons .next::after {
+    transform: rotate(50deg);
+}
+
+.dot_container {
+    width: 200px;
+    height: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.dot {
+    width: 30px;
+    height: 5px;
+    border-radius: 15%;
+    background: #fff;
+    cursor: pointer;
+}
+
+.slide_active {
+    background-color: #ee4a4a;
+}
+
+/* 메인(시작부분) 슬라이드 영역 끝 */
+
+/* 도넛 무한 슬라이드 시작 */
+.donut {
+    overflow: hidden;
+    height: 2000px;
+}
+
+.dount_container {
+    display: flex;
+    animation: carousel 5s linear infinite;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100vw;
+    width: calc(250px * 14);
+}
+
+.donut_box {
+    width: 250px;
+    height: 500px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    overflow: hidden;
+    margin: 0 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.donut_box:hover {
+    overflow: visible;
+    width: 400px;
+}
+
+@keyframes carousel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.donut_name {
+    font-family: 'NanumSquareNeo-Variable';
+    margin-top: 36px;
+}
+
+.donut_name_en {
+    font-family: 'ghanachoco';
+    font-size: 36px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.box1 {
+    background: #F2D5B5;
+}
+
+.box2 {
+    background: #A3EFE9;
+}
+
+.box3 {
+    background: #F4E6E7;
+}
+
+.box4 {
+    background: #DDF2BF;
+}
+
+.box5 {
+    background: #C8E9F1;
+}
+
+.box6 {
+    background: #F2D5B5;
+}
+
+.box7 {
+    background: #F2D5B5;
+}
+
+.box8 {
+    background: #F2D5B5;
+}
+
+.box9 {
+    background: #F2D5B5;
+}
+
+.box10 {
+    background: #F2D5B5;
+}
