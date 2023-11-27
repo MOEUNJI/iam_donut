@@ -1,3 +1,4 @@
+// 메인 슬라이드
 const buttons = document.querySelector('.buttons');
 // 닷을 포함한 prev,next 를 모두 감싸는 버튼의 컨테이너
 const container = document.querySelector('.slider_container');
@@ -124,9 +125,42 @@ function moveSlider(time) {
     updateButtons();
 }
 
-// setInterval(() => {
-//     next();
-// }, 3000);
+setInterval(() => {
+    next();
+}, 3000);
+// 메인 슬라이드 끝
+
+
+// 페이드 커피 이미지
+let fade = document.querySelectorAll(".coffee_fade .fade");
+let currentFade = 0;
+let fadeInterval = setInterval(nextFade, 2000);
+
+function nextFade() {
+    fade[currentFade].className = " fade";
+    currentFade = (currentFade + 1) % fade.length;
+    console.log(fade.length);
+    console.log(currentFade)
+    fade[currentFade].className = " slide showing";
+}
+// 페이드 커피 끝
+
+
+// 지점 검색 시작
+const inputText = document.getElementById("input-text");
+let searchBtn = document.querySelector(".search_btn");
+searchBtn.addEventListener("click", input);
+window.addEventListener("keyup", (e)=> {
+    if(e.key == "Enter" && inputText === document.activeElement) {
+        //inputText === document.activeElement (활성화된게 inputText 일때 엔터를 누르면 먹음(inputText 없으면 안 먹음))
+        input();
+    }
+});
+
+function input() {
+    window.open("https://www.google.co.kr/maps/search/%EC%95%84%EC%9D%B4%EC%97%A0%EB%8F%84%EB%84%9B " + inputText.value + "/data=!3m1!4b1?hl=ko&entry=ttu");
+}
+// 지점검색 끝
 
 
 // let copy = document.querySelectorAll(".donut_box").cloneNode(true);
