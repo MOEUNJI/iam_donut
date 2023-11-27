@@ -30,7 +30,11 @@
     font-style: normal;
 }
 
-/* 공용 스타일 */
+/* 공용 스타일 시작 */
+body {
+    font-family: 'NanumSquareNeo-Variable';
+}
+
 .text_area {
     margin-top: 100px;
     text-align: center;
@@ -44,12 +48,17 @@
 
 .area_text {
     margin-bottom: 100px;
-    font-family: 'NanumSquareNeo-Variable';
 }
+
+.text_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* 공용 스타일 끝 */
 
 /* 헤더 시작 */
 header {
-    font-family: 'NanumSquareNeo-Variable';
     position: fixed;
     width: 100%;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
@@ -80,7 +89,6 @@ header {
 
 .header_menu {
     display: flex;
-    font-family: 'NanumSquareNeo-Variable';
 }
 
 .slider_container {
@@ -181,23 +189,39 @@ header {
 
 /* 메인(시작부분) 슬라이드 영역 끝 */
 
-/* 도넛 무한 슬라이드 시작 */
+/* 도넛 슬라이드 시작 */
+
+.text_area {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.area_title {
+    font-size: 50px;
+    font-family: 'Cafe24Ohsquare';
+    margin-bottom: 16px;
+}
+
+.area_text {
+    margin-bottom: 100px;
+}
+
 .donut {
     overflow: hidden;
-    height: 2000px;
+    padding-bottom: 55px;
 }
 
 .dount_container {
     display: flex;
-    animation: carousel 5s linear infinite;
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100vw;
-    width: calc(250px * 14);
+    animation: carousel 35s linear infinite;
+}
+
+.donut_box:nth-child(even) {
+    margin-top: 70px;
 }
 
 .donut_box {
-    width: 250px;
+    width: 300px;
     height: 500px;
     border-radius: 50px;
     display: flex;
@@ -220,13 +244,13 @@ header {
     0% {
         transform: translateX(0);
     }
+
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-110%);
     }
 }
 
 .donut_name {
-    font-family: 'NanumSquareNeo-Variable';
     margin-top: 36px;
 }
 
@@ -258,21 +282,232 @@ header {
 }
 
 .box6 {
-    background: #F2D5B5;
+    background: #FFD8C5;
 }
 
 .box7 {
-    background: #F2D5B5;
+    background: #ffd7e4;
 }
 
 .box8 {
-    background: #F2D5B5;
+    background: rgb(228, 200, 255);
 }
 
 .box9 {
-    background: #F2D5B5;
+    background: #F7F6C7;
 }
 
 .box10 {
-    background: #F2D5B5;
+    background: #FDCED6;
+}
+
+.box11 {
+    background: #E1E8D5;
+}
+
+.box12 {
+    background: #FFFCAF;
+}
+
+/* 도넛 슬라이드 끝 */
+
+/* 아이엠커피 페이드 슬라이드 시작 */
+.coffee {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+.wave_box {
+    position: relative;
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(/image/wave_green.png);
+    background-size: 1000px 100px;
+}
+
+.wave1 {
+    animation: wave1 20s linear infinite;
+    z-index: 100;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+.wave2 {
+    animation: wave2 7s linear infinite;
+    z-index: 99;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+@keyframes wave1 {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes wave2 {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+.coffee_inner, 
+.coffee_inner > .text_area {
+    background: #DDF2BF;
+}
+
+.coffee_inner > .text_area > .area_title {
+    margin: 0;
+    padding: 24px 0;
+}
+
+.coffee_box {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.text_column > h3 {
+    font-size: 50px;
+    font-family: 'ghanachoco';
+}
+
+.small_title {
+    font-size: 24px;
+    font-family: 'Cafe24Ohsquareair';
+}
+
+.small_text {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.button_box > button {
+    background: none;
+    border: 1px solid #000;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 200px;
+    font-size: 16px;
+    font-family: 'NanumSquareNeo-Variable';
+    cursor: pointer;
+}
+
+/* 페이드 커피 이미지 시작 */
+.coffee_img_box {
+    position: relative;
+}
+.coffee_fade {
+    position: relative;
+    width: 580px;
+    height: 580px;
+    z-index: 97;
+}
+
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 580px;
+    height: 580px;
+    opacity: 0;
+    z-index: 1;
+    transition: 1s;
+    box-sizing: border-box;
+}
+
+.showing {
+    opacity: 1;
+    z-index: 98;
+}
+/* 페이드 커피 이미지 끝 */
+
+.rotate_text {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.rotate_text > img {
+    animation: rotate_image 10s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes rotate_image{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* 아이엠커피 페이드 슬라이드 끝 */
+
+/* 지점찾기 시작 */
+.place_search {
+    margin-top: 100px;
+    position: relative;
+}
+
+.place_search > h2 {
+    font-size: 100px;
+    font-family: 'ghanachoco';
+    text-align: center;
+}
+
+.place_search_box {
+    display: flex;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    z-index: -1;
+}
+
+.place_search_box > .text_column {
+    padding-left: 100px;
+}
+
+.place_search_box > .text_column > .small_title {
+    margin-top: 200px;
+}
+
+.search > p {
+    margin-bottom: 16px;
+}
+
+.input_box {
+    border: 1px solid #000;
+    width: 300px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.input_box > input {
+    font-size: 18px;
+    background: none;
+    outline: none;
+    border: none;
 }
