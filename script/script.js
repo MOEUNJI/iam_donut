@@ -131,6 +131,12 @@ setInterval(() => {
 // 메인 슬라이드 끝
 
 
+// 인피니티 슬라이드 시작
+const copy = document.querySelector(".dount_container").cloneNode(true);
+document.querySelector(".carousel_ani").appendChild(copy)
+// 인피니티 슬라이드 끝
+
+
 // 페이드 커피 이미지
 let fade = document.querySelectorAll(".coffee_fade .fade");
 let currentFade = 0;
@@ -161,7 +167,3 @@ function input() {
     window.open("https://www.google.co.kr/maps/search/%EC%95%84%EC%9D%B4%EC%97%A0%EB%8F%84%EB%84%9B " + inputText.value + "/data=!3m1!4b1?hl=ko&entry=ttu");
 }
 // 지점검색 끝
-
-
-// let copy = document.querySelectorAll(".donut_box").cloneNode(true);
-// document.querySelector(".dksdlf").appendChild(copy)

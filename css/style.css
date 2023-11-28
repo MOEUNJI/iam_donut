@@ -55,6 +55,10 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+
+.mb_35 {
+    margin-bottom: 35px;
+}
 /* 공용 스타일 끝 */
 
 /* 헤더 시작 */
@@ -93,7 +97,7 @@ header {
 
 .slider_container {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     font-size: 100px;
     line-height: 500px;
     overflow: hidden;
@@ -104,15 +108,37 @@ header {
 
 .slider_container>ul {
     transition: 1s;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
 }
 
-.slider_box>li,
+/* .slider_box>li,
 .slider_box>li>img {
     width: 100vw;
     height: 100vh;
+} */
 
+.slide1 {
+    background: url(../image/slide1.png);
+}
+
+.slide2 {
+    background: url(../image/slide2.png);
+}
+
+.slide3 {
+    background: url(../image/slide3.png);
+}
+
+.slide4 {
+    background: url(../image/slide4.png);
+}
+
+.slide_img {
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height: 990px;
+    width: 100%;
 }
 
 .buttons {
@@ -211,9 +237,30 @@ header {
     padding-bottom: 55px;
 }
 
+.carousel_ani {
+    display: flex;
+}
+
 .dount_container {
     display: flex;
-    animation: carousel 35s linear infinite;
+    animation: carousel 15s linear infinite;
+}
+
+.carousel_ani:hover .dount_container {
+    animation-play-state: paused;
+}
+
+@keyframes carousel {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.dount_container {
+    display: flex;
 }
 
 .donut_box:nth-child(even) {
@@ -238,16 +285,6 @@ header {
 .donut_box:hover {
     overflow: visible;
     width: 400px;
-}
-
-@keyframes carousel {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-110%);
-    }
 }
 
 .donut_name {
@@ -465,20 +502,27 @@ header {
 /* 지점찾기 시작 */
 .place_search {
     margin-top: 100px;
-    position: relative;
+    width: 100%;
+    height: 750px;
 }
 
-.place_search > h2 {
-    font-size: 100px;
+.position_container {
+    position: relative;
+
+}
+
+.position_container > h2 {
+    font-size: 85px;
     font-family: 'ghanachoco';
     text-align: center;
+    line-height: 100px;
 }
 
 .place_search_box {
     display: flex;
     position: absolute;
-    top: 70%;
-    left: 0;
+    top: 50%;
+    left: calc(50% - 970px);
     z-index: -1;
 }
 
@@ -511,3 +555,35 @@ header {
     outline: none;
     border: none;
 }
+/* 지점찾기 끝 */
+
+/* 뉴스 시작 */
+.news {
+    background: #D8E9F5;
+    padding-bottom: 100px;
+}
+
+.news > .text_area {
+    padding-top: 100px;
+}
+
+.news > .text_area > .area_title {
+    font-family: 'ghanachoco';
+}
+
+.news_list {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.news_img_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.news_img_box:nth-child(-n+5) {
+    padding-bottom: 35px;
+}
+
+/* 뉴스 끝 */
