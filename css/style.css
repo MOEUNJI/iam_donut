@@ -506,12 +506,12 @@ header {
     height: 750px;
 }
 
-.position_container {
+.relative_container {
     position: relative;
 
 }
 
-.position_container > h2 {
+.relative_container > h2 {
     font-size: 85px;
     font-family: 'ghanachoco';
     text-align: center;
@@ -523,6 +523,9 @@ header {
     position: absolute;
     top: 50%;
     left: calc(50% - 970px);
+}
+
+.place_search_box > img {
     z-index: -1;
 }
 
