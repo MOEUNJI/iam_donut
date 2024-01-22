@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I am Donut</title>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/media.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -36,31 +40,25 @@
     <!-- 헤더 끝 -->
 
     <!-- 메인 슬라이드 시작 -->
-    <section class="main_slide_area" id="top">
-        <div class="slider_container">
-            <ul class="slider_box">
-                <li class="slide_img slide1">
-                    <!-- <img src="./image/slide1.png" alt=""> -->
-                </li>
-                <li class="slide_img slide2">
-                    <!-- <img src="./image/slide2.png" alt=""> -->
-                </li>
-                <li class="slide_img slide3">
-                    <!-- <img src="./image/slide3.png" alt=""> -->
-                </li>
-                <li class="slide_img slide4">
-                    <!-- <img src="./image/slide4.png" alt=""> -->
-                </li>
-            </ul>
-        </div>
-        <div class="buttons">
-            <button class="prev"></button>
-            <button class="next"></button>
-        </div>
-        <div class="dot_container">
-            <!-- js로 dot 생성 -->
+    <section class="main_slider">
+        <div class="swiper my-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./image/slide1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./image/slide2.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./image/slide3.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./image/slide4.png" alt="">
+                </div>
+            </div>
         </div>
     </section>
+
     <!-- 메인 슬라이더 끝 -->
 
     <!-- 도넛 슬라이드 시작 -->
