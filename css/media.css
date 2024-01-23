@@ -1,9 +1,16 @@
+/* 테블릿 1차 반응형 */
 @media (max-width:1199px){
+    /* 헤더 시작 */
     .header_menu {
-        height: 60px;
-        font-size: 16px;
+        display: none;
     }
+    
+    .m_header {
+        display: block;
+    }
+    /* 헤더 끝 */
 
+    /* 도넛슬라이드 시작 */
     .area_title {
         font-size: 36px;
     }
@@ -11,7 +18,9 @@
     .dount_container {
         animation: carousel 20s linear infinite;
     }
+    /* 도넛슬라이드 끝 */
 
+    /* 커피 페이드 이미지 시작 */
     .text_area {
         margin-top: 100px;
     }
@@ -23,7 +32,7 @@
         /* align-items: center; */
     }
 
-    .text_column>h3 {
+    .text_column > h3 {
         font-size: 36px;
     }
 
@@ -57,7 +66,46 @@
         width: 180px;
         height: 180px;
     }
+    /* 커피 페이드 이미지 끝 */
+
+    /* 뉴스 시작 */
+    .news_list {
+        width: 600px;
+    }
+
+    .news_img_box>li {
+        box-shadow: 5px 5px 10px #00000060;
+        overflow: hidden;
+        background-size: 100%;
+        background-position: center;
+        transition: 0.5s;
+        height: 250px;
+        width: 250px;
+    }
+
+    .news_img > img {
+        width: 250px;
+        height: 250px;
+    }
+    /* 뉴스 끝 */
+
+    /* 푸터시작 */
+    .footer_container {
+        width: 800px;
+    }
+    .footer_top > img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .footer_menu,
+    .footer_text {
+        font-size: 14px;
+    }
+    /* 푸터끝 */
 }
+
+/* 테블릿 2차 반응형 */
 @media (max-width:960px){
 
 }

@@ -48,3 +48,30 @@ var swiper = new Swiper(".swiper", {
     },
     keyboard: true,
 });
+
+
+// 햄버거메뉴 
+let burger = $('.menu_trigger');
+
+burger.each(function (index) {
+    var $this = $(this);
+
+    $this.on('click', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active-' + (index + 1));
+    })
+});
+
+let trigger = document.querySelector(".menu_trigger");
+let mHeader = document.querySelector(".header_open");
+
+trigger.addEventListener("click", triggerClick);
+
+
+function triggerClick() {
+    if (mHeader.style.display == "block") {
+        mHeader.style.display = "none";
+    } else {
+        mHeader.style.display = "block";
+    }
+}
