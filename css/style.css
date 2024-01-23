@@ -84,11 +84,94 @@ header {
 .header_menu>li>a {
     padding: 0 60px;
 }
+/* 모바일헤더 시작 */
+.m_header {
+    height: 60px;
+    display: none;
+}
 
-/* 헤더 끝 */
+.m_logo,
+.m_logo > a > img {
+    width: 60px;
+    height: 60px;
+    margin-left: 30px;
+}
+.menu_trigger,
+.menu_trigger span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+}
+
+.menu_trigger {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border: none;
+}
+
+.menu_trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #000000;;
+    border-radius: 4px;
+}
+
+.menu_trigger span:nth-of-type(1) {
+    top: 0;
+}
+
+.menu_trigger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu_trigger span:nth-of-type(3) {
+    bottom: 0;
+}
+
+.menu_trigger.active-1 span:nth-of-type(1) {
+    transform: translateY(10px) rotate(-45deg);
+}
+
+.menu_trigger.active-1 span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.menu_trigger.active-1 span:nth-of-type(3) {
+    transform: translateY(-16px) rotate(45deg);
+}
+
+.header_close {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger_icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 30px;
+}
+
+.m_header_menu > li {
+    padding: 16px 0;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    text-align: center;
+    background: #ffffff;
+}
+
+.header_open {
+    display: none;
+}
+/* 모바일 헤더 끝 */
+/* 헤더 최종 끝 */
 
 /* 메인(시작부분) 슬라이드 영역 시작 */
-
 .swiper {
     width: 100%;
     height: 100%;
@@ -98,11 +181,9 @@ header {
 .swiper img {
     width: 100%;
 }
-
 /* 메인(시작부분) 슬라이드 영역 끝 */
 
 /* 도넛 슬라이드 시작 */
-
 .text_area {
     margin-top: 100px;
     text-align: center;
@@ -476,8 +557,8 @@ header {
     justify-content: space-between;
 }
 
-.news_img_box:nth-child(-n+5) {
-    padding-bottom: 35px;
+.news_img_box>.news_img {
+    margin-bottom: 35px;
 }
 
 .news_img_box:hover .news_img {
