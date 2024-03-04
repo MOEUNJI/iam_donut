@@ -106,6 +106,152 @@
 }
 
 /* 테블릿 2차 반응형 */
-@media (max-width:960px){
 
+@media (max-width:960px){
+    /* 헤더 시작 */
+    .hamburger_icon,
+    .menu_trigger {
+        width: 24px;
+        height: 24px;
+    }
+
+    .m_logo, .m_logo > a > img {
+        margin-left: 15px;
+    }
+    /* 헤더끝 */
+
+    /* 슬라이드 */
+    .main_slider {
+        padding-top: 60px;
+    }
+    /* 슬라이드 끝 */
+
+    /* 지점찾기 시작 */
+    .relative_container > h2 {
+        font-size: 60px;
+    }
+
+    .place_search_box>.text_column {
+        padding-left: 50px;
+    }
+    /* 지점찾기  */
+
+    /* 햄버거메뉴 로테이드 */
+    .menu_trigger.active-1 span:nth-of-type(1) {
+        transform: translateY(10px) rotate(-45deg);
+    }
+
+    .menu_trigger.active-1 span:nth-of-type(3) {
+        transform: translateY(-10.5px) rotate(45deg);
+    }
+    /* 햄버거메뉴 로테이드 끝*/
+}
+
+/* flex 세로로 나열 */
+@media (max-width:850px){
+    /* 커피박스 시작 */
+    .coffee_box {
+        flex-direction: column-reverse;
+    }
+
+    .coffee_img_box,
+    .coffee_fade {
+        width: 350px;
+        height: 350px;
+    }
+
+    .coffee_img_box {
+        margin: 0 auto;
+    }
+
+    .coffee_box {
+        width: 360px;
+        margin-top: 200px;
+    }
+
+    .text_column {
+        align-items: center;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .text_column > .small_text {
+        font-size: 12px;
+        margin: 24px 0;
+    }
+    /* 커피박스 끝 */
+
+    .place_search_box {
+        flex-direction: column;
+        position: absolute;
+        left: calc(50% - 180px);
+        width: 343px;
+    }
+
+    /* 지점찾기 시작 */
+    .place_search_box>.text_column>.small_title {
+        margin-top: 50px;
+    }
+
+    .search {
+        margin-bottom: 60px;
+    }
+
+    .search > p {
+        font-size: 14px;
+    }
+
+    .place_search_box>.text_column {
+        padding-left: 0;
+    }
+    /* 지점찾기 끝 */
+
+    /* 뉴스 시작 */
+    .news_img > img,
+    .news_img_box>li {
+        width: 150px;
+        height: 150px;
+    }
+
+    .news_img_box > li {
+        margin-right: 15px;
+    }
+    /* 뉴스 끝 */
+
+    /* 푸터시작 */
+    .footer_top {
+        flex-direction: column;
+        text-align: center;
+        height: 280px;
+        padding: 16px 0;
+    }
+
+    .footer_container {
+        width: 360px;
+    }
+    /* 푸터끝 */
+}
+
+@media (max-width:660px){
+    .donut,
+    .place_search,
+    .news {
+        padding: 0 16px;
+    }
+    .news_list {
+        width: 325px;
+    }
+
+    .news_img_box {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .news_img_box > li {
+        margin: 0;
+    }
+
+    .relative_container > h2 {
+        font-size: 36px;
+    }
 }
