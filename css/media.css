@@ -235,8 +235,10 @@
 @media (max-width:660px){
     .donut,
     .place_search,
-    .news {
+    .news,
+    .coffee_inner {
         padding: 0 16px;
+        width: auto;
     }
     .news_list {
         width: 325px;
@@ -253,5 +255,52 @@
 
     .relative_container > h2 {
         font-size: 36px;
+        line-height: 50px;
     }
+
+    .place_search {
+        width: auto;
+    }
+}
+
+@media (max-width:500px){
+    .dount_container {
+        padding-bottom: 50px;
+    }
+    .donut_box {
+        width: 150px;
+        height: 300px;
+    }
+
+    .donut_name {
+        font-size: 14px;
+    }
+
+    .donut_name_en {
+        font-size: 18px;
+        margin-top: 35px;
+    }
+
+    .donut_box > img {
+        width: 150px;
+    }
+
+    .donut_box:hover {
+        width: auto;
+    }
+
+    .carousel_ani:hover .dount_container {
+        animation-play-state: running;
+    }
+
+    .place_search_box > img {
+        width: 330px;
+    }
+}
+
+@media (max-width:400){
+    .place_search_box {
+        left: calc(55% - 180px);
+    }
+
 }
